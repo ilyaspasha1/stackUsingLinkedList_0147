@@ -84,4 +84,32 @@ int main() {
         cout << "Enter your choice : ";
         cin >> choice;
 
+        switch (choice) {
+            case 1:
+                cout << "Enter the value to push : ";
+                cin >> value;
+                stact.push(value);
+                break;
+            case 2:
+                if (!stact.isEmpty()) {
+                    stact.pop();
+                }
+                else {
+                    cout << "Stact is Empty. Cannot pop." << endl;
+                }
+                break;
+            case 3:
+                if (!stact.isEmpty()) {
+                    stact.peek();
+                }
+                else {
+                    cout << "Stact is Empty. No top value" << endl;
+                }
+                break;
+            case 4:
+                cout << "Exiting Program." << endl;
+                break;
+            default:
+                cout << "Invalid choice. Try again." << endl;
+                break;
        
